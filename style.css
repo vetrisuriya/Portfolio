@@ -639,7 +639,7 @@ body footer a {
 
 @media screen and (max-width: 1024px) {
   body main.home {
-    width: 85%;
+    width: 95%;
   }
 }
 @media screen and (max-width: 768px) {
