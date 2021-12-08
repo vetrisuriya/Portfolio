@@ -1,0 +1,698 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: auto;
+    background: #f2f2f2;
+
+    main {
+        width: 55%;
+        margin: 50px auto;
+    }
+
+    main.home {
+        width: 65%;
+        
+        .section2, .section3, .section4 {
+            margin-top: 25px;
+        }
+
+        .section2 {
+            display: flex;
+            column-gap: 25px;
+
+            > div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+
+                > div {
+                    width: 100%;
+
+                    .blog {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .section4 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 25px;
+
+            > div {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        height: 50px;
+        color: #BDBDBD;
+        display: -ms-grid;
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+      
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.card, .card__1 {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 7px;
+    padding: 15px 18px;
+    display: flex;
+    column-gap: 5%;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+
+    .card-header {
+        width: 30%;
+
+        .card-image {
+            width: 100%;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                border-radius: 7px;
+            }
+        }
+    }
+
+    .card-body {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .card-profile {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .card-details {
+                h5 {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                p {
+                    font-size: 11px;
+                    color: #828282;
+                }
+            }
+            .card-contact {
+                h6 {
+                    font-size: 10px;
+                    color: #828282;
+                    font-weight: 200;
+
+                    span {
+                        font-size: 11px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .card-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            p {
+                font-size: 11px;
+                color: #4F4F4F;
+            }
+        }
+    }
+}
+
+// card - 1 styles
+.card__1 .card-body {
+    row-gap: 10px;
+    
+    .card-tags {
+        span {
+            font-size: 10px;
+            color: #828282;
+        }
+    }
+    .card-title {
+        font-size: 15px;
+    }
+    .card-buttons {
+        display: flex;
+        column-gap: 8px;
+        margin-top: 25px;
+
+        button {
+            padding: 8px 28px;
+            border-radius: 7px;
+            border: 0;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .2px;
+        }
+
+        button:first-of-type {
+            background: #2F80ED;
+            color: #fff;
+        }
+        button:last-of-type {
+            border: 1px solid #2F80ED;
+            background: #fff;
+            color: #2F80ED;
+        }
+    }
+}
+
+.card.card-vertical, .card__1.card-vertical {
+    width: 320px;
+    flex-direction: column;
+    column-gap: unset;
+    row-gap: 20px;
+
+    .card-header {
+        width: 100%;
+    }
+
+    .card-body {
+        width: 100%;
+
+        .card-profile {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}
+
+
+// progress card
+.progress-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+    padding: 15px;
+
+    .card-title {
+        font-size: 14px;
+        color: #4F4F4F;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+    .card-content {
+        margin-top: 10px;
+        display: flex;
+        column-gap: 35px;
+
+        > div {
+            flex: 1;
+        }
+
+        .progress-wrapper {
+            width: 100%;
+            display: flex;
+            column-gap: 5px;
+            margin: 10px 0px;
+            align-items: center;
+
+            .skill-name {
+                width: 35%;
+                font-size: 11px;
+            }
+            .skill-progress {
+                width: calc(65% - 5px);
+                height: 6px;
+                background: #C4C4C4;
+                border-radius: 10px;
+
+                .inner {
+                    border-radius: inherit;
+                    width: var(--value);
+                    height: 100%;
+                    background: #2F80ED;
+                }
+            }
+        }
+    }
+}
+
+.progress-card.progress-vertical {
+    width: 320px;
+
+    .card-content {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        column-gap: unset;
+
+        > div:last-of-type {
+            margin-top: -10px;
+        }
+    }
+}
+
+
+// blog
+.blog {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 7px;
+    padding: 15px 18px;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 30px;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+    position: relative;
+
+    .blog-header {
+        width: 40%;
+
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            img {
+                height: 90%;
+                width: 40%;
+                object-fit: cover;
+                border-radius: 7px 0px 0px 7px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0%, -50%);
+            }
+        }
+    }
+
+    .blog-body {
+        width: calc(60% - 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .blog-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            p {
+                font-size: 11px;
+                color: #4F4F4F;
+            }
+        }
+        .blog-tags {
+            span {
+                font-size: 10px;
+                color: #E0E0E0;
+            }
+        }
+        .blog-title {
+            font-size: 15px;
+        }
+        .blog-link {
+            a {
+                text-decoration: none;
+                font-size: 10px;
+                
+                span {
+                    color: #2F80ED;
+                }
+            }
+        }
+    }
+}
+
+.blog.blog-vertical {
+    width: 320px;
+}
+
+
+// experience card
+.exp-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+    padding: 15px;
+
+    .exp-header {
+        font-size: 14px;
+        color: #4F4F4F;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+    .exp-body {
+        margin-top: 15px;
+        display: flex;
+        column-gap: 25px;
+
+        .exp-wrapper {
+            flex: 1;
+            display: flex;
+            column-gap: 15px;
+
+            .exp-image {
+                width: 25%;
+
+                img {
+                    width: 100%;
+                    height: 70px;
+                    object-fit: fill;
+                }
+            }
+            .exp-detials {
+                width: calc(75% - 15px);
+                color: #828282;
+                display: flex;
+                flex-direction: column;
+                row-gap: 3px;
+
+                .exp-date {
+                    font-size: 8px;
+                    font-weight: 100;
+                }
+                .exp-title {
+                    color: #333333;
+                    font-size: 10px;
+                    cursor: pointer;
+                }
+                .exp-content {
+                    margin-top: 10px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+.exp-card.exp-vertical {
+    width: 320px;
+
+    .exp-body {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+
+// hobbies card
+.hobby-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+    padding: 15px;
+
+    .hobby-header {
+        font-size: 14px;
+        color: #4F4F4F;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+    .hobby-body {
+        margin-top: 15px;
+        display: flex;
+        column-gap: 25px;
+
+        .hobby-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .hobby-image {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 10px;
+                    object-fit: fill;
+                }
+            }
+            .hobby-detials {
+                width: 100%;
+                color: #828282;
+
+                .hobby-title {
+                    color: #333333;
+                    font-size: 10px;
+                    cursor: pointer;
+                }
+                .hobby-content {
+                    margin-top: 10px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+.hobby-card.hobby-vertical {
+    width: 320px;
+
+    .hobby-body {
+        flex-direction: column;
+        row-gap: 30px;
+
+        .hobby-wrapper {
+            row-gap: 5px;
+
+            .hobby-image {
+
+                img {
+                    height: 120px;
+                }
+            }
+        }
+    }
+}
+
+
+// projects card
+.projects-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 0px #3d3b3b21;
+    padding: 15px;
+
+    .projects-header {
+        font-size: 14px;
+        color: #4F4F4F;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: .5px;
+    }
+    .projects-body {
+        margin-top: 20px;
+        display: flex;
+        column-gap: 12px;
+
+        button {
+            padding: 6px 20px;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .2px;
+            background: #fff;
+            border: 1px solid #4F4F4F;
+            color: #4F4F4F;
+            transition: all .2s ease-in-out;
+        }
+        button:hover {
+            border: 1px solid #2F80ED;
+            color: #2F80ED;
+        }
+        button.active {
+            border: 1px solid #2F80ED;
+            background: #2F80ED;
+            color: #fff;
+        }
+    }
+}
+
+
+// pagination card
+.pagination-card {
+    width: 100%;
+    display: flex;
+
+    .pagination-body {
+        display: inline-flex;
+        column-gap: 8px;
+
+        button {
+            width: 25px;
+            height: 25px;
+            display: grid;
+            place-items: center;
+            border-radius: 4px;
+            border: 0;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 500;
+            border: 1px solid #4F4F4F;
+            color: #4F4F4F;
+            transition: all .2s ease-in-out;
+        }
+        button:not(.dot, .active):hover {
+            border: 1px solid #2F80ED;
+            color: #2F80ED;
+        }
+        button.active {
+            border: 1px solid #2F80ED;
+            background: #2F80ED;
+            color: #fff;
+        }
+        button.dot {
+            border: 0;
+            cursor: unset;
+            background: unset;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    body {
+        main.home {
+            width: 85%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        main {
+            width: 90%;
+        }
+
+        main.home {
+            width: 90%;
+            
+            .section2, .section3, .section4 {
+                margin-top: 25px;
+            }
+    
+            .section2 {
+                flex-direction: column;
+                row-gap: 25px;
+    
+                > div {
+                    width: 100%;
+    
+                    > div {
+                        width: 100%;
+    
+                        .blog {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .section4 {
+                grid-template-columns: 1fr;
+                row-gap: 25px;
+    
+                > div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .card, .card__1 {
+        flex-direction: column;
+        column-gap: unset;
+        row-gap: 20px;
+
+        .card-header {
+            width: 100%;
+        }
+
+        .card-body {
+            width: 100%;
+
+            .card-profile {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+        }
+    }
+
+    .card.card-vertical, .card__1.card-vertical {
+        width: 100%;
+    }
+
+    // progress card
+    .progress-card {
+        .card-content {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            column-gap: unset;
+
+            > div:last-of-type {
+                margin-top: -10px;
+            }
+        }
+    }
+    .progress-card.progress-vertical {
+        width: 100%;
+    }
+
+    // blog
+    .blog.blog-vertical {
+        width: 100%;
+    }
+
+    // experience card
+    .exp-card {
+        .exp-body {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+    .exp-card.exp-vertical {
+        width: 100%;
+    }
+
+    // hobbies card
+    .hobby-card {
+        .hobby-body {
+            flex-direction: column;
+            row-gap: 30px;
+
+            .hobby-wrapper {
+                row-gap: 5px;
+            }
+        }
+    }
+    .hobby-card.hobby-vertical {
+        width: 100%;
+    }
+}
