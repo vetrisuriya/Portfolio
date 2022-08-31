@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://vetri-suriya.web.app/devchallenges/portfolio/">Preview Website</a>
+    <a href="https://rvs-portfolio.onrender.com/">Preview Website</a>
   </h3>
 </div>
 
